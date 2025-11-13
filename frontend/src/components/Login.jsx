@@ -3,7 +3,7 @@ import axios from 'axios'
 import { toast } from 'sonner'
 import { Bot, Mail, Lock, User, GraduationCap, LogIn, UserPlus, Sparkles, BookOpen, Brain } from 'lucide-react'
 
-const API_URL = 'http://localhost:8000'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 export default function Login({ onLogin }) {
   const [isRegister, setIsRegister] = useState(false)

@@ -9,7 +9,7 @@ import {
 } from 'lucide-react'
 import VoiceAssistant from './VoiceAssistant'
 
-const API_URL = 'http://localhost:8000'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 export default function ChatInterface({ token, onLogout, user, setUser }) {
   const [messages, setMessages] = useState([])

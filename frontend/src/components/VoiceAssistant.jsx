@@ -6,7 +6,7 @@ import {
   Sparkles, Radio, Zap, ArrowLeft
 } from 'lucide-react'
 
-const API_URL = 'http://localhost:8000'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 export default function VoiceAssistant({ token, onLogout, user, onBack }) {
   const [isListening, setIsListening] = useState(false)
